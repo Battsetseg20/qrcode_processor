@@ -1,5 +1,3 @@
-# Markdown syntax guide
-
 # QRCode Processor
 
 ## Description
