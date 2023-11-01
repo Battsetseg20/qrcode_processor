@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CURRENT_DIR="$(pwd)"
+
+export PYTHONPATH="$PYTHONPATH:$CURRENT_DIR"
+
+echo "PYTHONPATH set to: $PYTHONPATH"
