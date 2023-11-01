@@ -300,6 +300,13 @@ This project utilizes `pytest` for testing. Tests are designed to interact with 
    ```bash
    pytest tests/test_user_routes.py
    ```
+4. If you encounter issue related to importing modules while running the test, do the following to ensure that the directory containing your project is in the Python path
+    ```
+    chmod +x set_pythonpath.sh
+    ./set_pythonpath.sh
+    ```
+
+
 
 #### Test Fixtures:
 
