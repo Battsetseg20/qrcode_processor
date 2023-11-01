@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *.pyo
+pytest_cache/
 
 # Virtual env
 venv/
@@ -21,3 +22,6 @@ venv/
 
 # Miscellaneous
 .DS_Store
+
+# coverage files
+.coverage
