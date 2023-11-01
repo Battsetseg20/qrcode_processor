@@ -124,10 +124,12 @@ uvicorn main:app --reload
     - **Parameters**: `skip` and `limit`
     - **Sample Response**:
       ```json
-      [
+        [
         {
           "id": "<UUID>",
-          "role": "<ROLE_NAME>"
+          "role": "<ROLE_NAME>",
+          "department_id": "<DEPARTMENT_ID>",
+          "user_id": "<USER_ID>"
         }
       ]
       ```
@@ -250,33 +252,25 @@ Let's use the Swagger UI for testing the endpoint `delete_department`
 1. **Open Swagger UI**: Navigate to your Swagger UI, usually it's hosted at `http://localhost:8000/docs` if you're running the application locally.
 
 2. **Endpoint `GET department_roles`**: This endpoint is open to public. You can retrieve the `user_id` who has `admin` role at a certain department `department_id`.
-   ```
-   GET /department_roles/ PHOTO
-   ```
+   
+   ![image description](misc/get_department_roles.png)
 
-3. **Endpoint `GET /user/{user_id}`**: This endpoint is also open to public. You can retrieve the `name` of the `user` we have retrieved at the step `2`
-```
-   GET /user/user_id PHOTO
-   ```
+4. **Endpoint `GET /user/{user_id}`**: This endpoint is also open to public. You can retrieve the `name` of the `user` we have retrieved at the step `2`
+   ![image description](misc/alyssa_by_id.png)
 
 4. **Authorization**: 
    - Add the user `name` and common password `123456789` to log in
 
-```
-photo
-```
-5. **Endpoint `DELETE department`**: As the description of the endpoint indicates, the authenticated user must be the admin of the department to be able to delete it.\
+    ![image description](misc/alyssa_logged_in.png)
+   
+6. **Endpoint `DELETE department`**: As the description of the endpoint indicates, the authenticated user must be the admin of the department to be able to delete it.\
 Use the `department_id` from the `step 2` to test the endpoint
 
-```
-photo
-```
+    ![image description](misc/admin_deleted_department.png)
 
-When the user is not admin, error message is sent in the response
+When the user is not admin(i.e member), forbidden message is sent in the response
 
-```
-photo
-```
+![image description](misc/member_try_delete_department.png)
 
 
 ### Tests
