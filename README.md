@@ -11,7 +11,7 @@ This demo Python application provides a main functionality centered around QR co
 All functionalities are exposed through API endpoints, allowing for easy usage.
 
 ## Prerequisites
-**Python**: This application requires Python 3. Ensure it's installed by running python3 --version.\
+**Python**: This application requires Python 3.8 or later To check your currently installed version, run `python3 --version`. Please visit [Python's official website](https://www.python.org/downloads/) \
 **PostgreSQL**: This app uses PostgreSQL as its primary database. If you don't have it installed, you can use Homebrew (for macOS users) to install it. Check its installation with psql --version.\
 **Virtual Environment**: It's recommended to use a virtual env to keep the application's dependencies isolated.
 
