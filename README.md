@@ -47,16 +47,17 @@ createdb qrcode_processor_db_test
 ```
 
 7. Database seed
+In your project directory 
+```
+cp .env.sample .env
+```
 ```
 python seed_db.py
 ```
 Seed will populate the database and generate the **test qrcode files** that are needed to test the endpoint. Please do not skip this step.
 
 ### Running the app
-In your project directory 
-```
-cp .env.sample .env
-```
+
 Once the .env file created you can start the app by running
 ```
 uvicorn main:app --reload
